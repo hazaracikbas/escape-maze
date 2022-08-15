@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Invisible Wall
   - Ground
+  - Yellow Key
+  - Green Key
+  - Blue Key
+  - Red Key
   layers:
   - Default
   - TransparentFX

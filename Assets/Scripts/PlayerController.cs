@@ -10,6 +10,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Vector3 offset;
 
+    public bool hasRedKey;
+    public bool hasBlueKey;
+    public bool hasYellowKey;
+    public bool hasGreenKey;
 
     void Start()
     {
@@ -37,7 +41,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("isMoving", false);
         }
-
     }
 
 }
