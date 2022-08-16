@@ -10,10 +10,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Vector3 offset;
 
-    public bool hasRedKey;
-    public bool hasBlueKey;
-    public bool hasYellowKey;
-    public bool hasGreenKey;
+    // ENCAPSULATION
+
+    public bool hasRedKey { get; set; }
+    public bool hasBlueKey { get; set; }
+    public bool hasYellowKey { get; set; }
+    public bool hasGreenKey { get; set; }
 
     void Start()
     {
@@ -26,6 +28,8 @@ public class PlayerController : MonoBehaviour
         PlayerMovement();
     }
 
+
+    // ABSTRACTION
     void PlayerMovement()
     {
         playerRB.velocity = new Vector3(joyStick.Horizontal * speed, playerRB.velocity.y, joyStick.Vertical * speed);

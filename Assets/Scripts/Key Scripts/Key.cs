@@ -5,6 +5,7 @@ using UnityEngine;
 public class Key : MonoBehaviour
 {
     [SerializeField] private ParticleSystem poof;
+
     public PlayerController pc;
 
     private void OnTriggerEnter(Collider other)
