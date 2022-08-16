@@ -10,4 +10,19 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void NextLevel()
+    {
+        int i = SceneManager.GetActiveScene().buildIndex;
+
+        if (i <= SceneManager.sceneCount)
+        {
+            SceneManager.LoadScene(i + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene(1);
+        }
+
+    }
+
 }
