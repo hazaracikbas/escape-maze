@@ -10,6 +10,8 @@ TagManager:
   - Green Key
   - Blue Key
   - Red Key
+  - FxTemporaire
+  - Diamond
   layers:
   - Default
   - TransparentFX

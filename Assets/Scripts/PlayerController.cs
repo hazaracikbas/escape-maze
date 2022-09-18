@@ -9,9 +9,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FloatingJoystick joyStick;
     [SerializeField] private Animator animator;
     [SerializeField] private Vector3 offset;
+    [SerializeField] private ParticleSystem pickUpGem;
+    [SerializeField] private GameManager gameManager;
 
     // ENCAPSULATION
-
     public bool hasRedKey { get; set; }
     public bool hasBlueKey { get; set; }
     public bool hasYellowKey { get; set; }
@@ -22,12 +23,10 @@ public class PlayerController : MonoBehaviour
         playerRB = GetComponent<Rigidbody>();
     }
 
-
     void FixedUpdate()
     {
         PlayerMovement();
     }
-
 
     // ABSTRACTION
     void PlayerMovement()
@@ -38,12 +37,29 @@ public class PlayerController : MonoBehaviour
         {
             transform.rotation = Quaternion.LookRotation(playerRB.velocity);
 
-            //Animation condition
+            //Running animation condition
             animator.SetBool("isMoving", true);
         }
         else
         {
             animator.SetBool("isMoving", false);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Collecting gems
+        if(other.CompareTag("Diamond"))
+        {
+            gameManager.CollectGems();
+            Destroy(other.gameObject);
+            pickUpGem.Play();
+        }
+
+        // Reaching finish line
+        if (other.CompareTag("Finish"))
+        {
+            gameManager.LevelComplete();
         }
     }
 
