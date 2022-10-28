@@ -12,7 +12,7 @@ public class GreenDoor : Door
         {
             UnlockDoor();
             Destroy(gameObject);
-
+            pc.hasGreenKey = false;
         }
     }
 

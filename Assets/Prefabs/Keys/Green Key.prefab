@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5609529119585406367}
   - component: {fileID: 6869117866864690215}
   - component: {fileID: 1914762657}
+  - component: {fileID: -5955098539844107383}
   - component: {fileID: 1914762658}
   m_Layer: 0
   m_Name: Green Key
@@ -28,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6258298636463418442}
-  m_LocalRotation: {x: 0.3696438, y: -0.099045776, z: 0.23911767, w: 0.89239913}
-  m_LocalPosition: {x: -1.38, y: 1.7235056, z: 2.083437}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 30}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7655550139079719253
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -53,7 +54,7 @@ MeshRenderer:
   m_GameObject: {fileID: 6258298636463418442}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -111,8 +112,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e369ae486c433439d059bef0e8edd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poof: {fileID: 19800000, guid: 83cd9cc9f9c88824ba18dc59b05ae328, type: 3}
+  collectEffect: {fileID: 1702657300312902, guid: 3dbbdd59644995146a534fe84c8db108, type: 3}
   pc: {fileID: 7480822803016731809, guid: 052d77b32bdd01f48b57a8a784595065, type: 3}
+--- !u!114 &-5955098539844107383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6258298636463418442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 2
+  outlineColor: {r: 0, g: 0.65882355, b: 0, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!114 &1914762658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,5 +144,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59fdddd8a00a8e49821450a4df17917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poof: {fileID: 19800000, guid: 83cd9cc9f9c88824ba18dc59b05ae328, type: 3}
+  collectEffect: {fileID: 1702657300312902, guid: 3dbbdd59644995146a534fe84c8db108, type: 3}
   pc: {fileID: 7480822803016731809, guid: 052d77b32bdd01f48b57a8a784595065, type: 3}

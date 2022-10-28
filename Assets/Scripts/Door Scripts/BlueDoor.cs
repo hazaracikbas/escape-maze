@@ -12,7 +12,7 @@ public class BlueDoor : Door
         {
             UnlockDoor();
             Destroy(gameObject);
-
+            pc.hasBlueKey = false;
         }
     }
 

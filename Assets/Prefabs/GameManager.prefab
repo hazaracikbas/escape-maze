@@ -44,9 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2546399e27a84a74b94dde255ebcb6e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pc: {fileID: 7480822803016731809, guid: 052d77b32bdd01f48b57a8a784595065, type: 3}
   levelScreen: {fileID: 0}
-  joyStick: {fileID: 8170153791668043269, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+  canvas: {fileID: 0}
+  startScreen: {fileID: 0}
+  confetti:
+  - {fileID: 0}
+  - {fileID: 0}
   playerData:
     playerCurrency: 0
+    playerLevel: 0
   scoreText: {fileID: 0}
+  levelText: {fileID: 0}
   score: 0
+  level: 0

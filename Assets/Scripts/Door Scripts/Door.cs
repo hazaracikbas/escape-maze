@@ -5,11 +5,14 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField] Animator doorAnim;
-    [SerializeField] ParticleSystem unlockEffect;
+    [SerializeField] GameObject unlockEffect;
 
     public virtual void UnlockDoor()
     {
-        unlockEffect.Play();
+        Instantiate(unlockEffect, transform.position, Quaternion.identity);
+
+        Taptic.Heavy();
+
         doorAnim.SetBool("isUnlocked", true);
     }
 

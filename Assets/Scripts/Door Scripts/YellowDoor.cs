@@ -12,7 +12,7 @@ public class YellowDoor : Door
         {
             UnlockDoor();
             Destroy(gameObject);
-
+            pc.hasYellowKey = false;
         }
     }
 

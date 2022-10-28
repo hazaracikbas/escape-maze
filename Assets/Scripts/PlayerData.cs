@@ -5,11 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    public int playerCurrency;
+    public int playerCurrency, playerLevel;
 
     public PlayerData()
     {
         playerCurrency = 0;
+        playerLevel = 1;
     }
     
 

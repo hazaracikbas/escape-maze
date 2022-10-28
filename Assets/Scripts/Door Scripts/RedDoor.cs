@@ -12,7 +12,7 @@ public class RedDoor : Door
         {
             UnlockDoor();
             Destroy(gameObject);
-
+            pc.hasRedKey = false;
         }
     }
 

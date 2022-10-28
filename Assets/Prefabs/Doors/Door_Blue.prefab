@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 0, g: 0.32941177, b: 1, a: 1}
-  outlineWidth: 4
+  outlineWidth: 6
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -144,7 +144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7151377364094065964}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1, y: 0, z: -0.15}
+  m_LocalPosition: {x: -1, y: 0, z: -0.17}
   m_LocalScale: {x: 0.5, y: 0.0005, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -228,8 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnim: {fileID: 742016945}
-  unlockEffect: {fileID: 19800018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
-  pc: {fileID: 0}
+  unlockEffect: {fileID: 8271804095254979107, guid: b1a8b10f08a50484895938189774175f, type: 3}
+  pc: {fileID: 7480822803016731809, guid: 052d77b32bdd01f48b57a8a784595065, type: 3}
 --- !u!1 &7888025086360882060
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineMode: 1
   outlineColor: {r: 0, g: 0.32941177, b: 1, a: 1}
-  outlineWidth: 4
+  outlineWidth: 6
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
@@ -415,4 +415,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnim: {fileID: 742016945}
-  unlockEffect: {fileID: 19800018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+  unlockEffect: {fileID: 8271804095254979107, guid: b1a8b10f08a50484895938189774175f, type: 3}

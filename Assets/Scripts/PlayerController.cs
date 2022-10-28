@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FloatingJoystick joyStick;
     [SerializeField] private Animator animator;
     [SerializeField] private Vector3 offset;
-    [SerializeField] private ParticleSystem pickUpGem;
     [SerializeField] private GameManager gameManager;
 
     // ENCAPSULATION
@@ -35,7 +34,10 @@ public class PlayerController : MonoBehaviour
 
         if (joyStick.Horizontal != 0 || joyStick.Vertical != 0)
         {
-            transform.rotation = Quaternion.LookRotation(playerRB.velocity);
+            if(playerRB.velocity != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(playerRB.velocity);
+            }
 
             //Running animation condition
             animator.SetBool("isMoving", true);
@@ -53,12 +55,13 @@ public class PlayerController : MonoBehaviour
         {
             gameManager.CollectGems();
             Destroy(other.gameObject);
-            pickUpGem.Play();
         }
 
         // Reaching finish line
         if (other.CompareTag("Finish"))
         {
+            animator.SetBool("levelComplete", true);
+            playerRB.constraints = RigidbodyConstraints.FreezePosition;
             gameManager.LevelComplete();
         }
     }

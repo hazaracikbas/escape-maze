@@ -4,13 +4,35 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    [SerializeField] private ParticleSystem poof;
+    [SerializeField] private GameObject collectEffect;
 
     public PlayerController pc;
+    private Vector3 tilt = new Vector3(45, 0, 30);
+
+    private void Start()
+    {
+        transform.rotation = Quaternion.Euler(tilt);
+    }
+
+    //void Update()
+    //{
+    //    FacePlayer();
+    //}
+
+    //public void FacePlayer()
+    //{
+    //    GameObject player = GameObject.Find("Player");
+
+    //    if (player.transform.position.y > 0)
+    //    {
+    //        transform.LookAt(player.transform.position);
+    //    }
+    //}
 
     private void OnTriggerEnter(Collider other)
     {
         CollectKey(other);
+        Taptic.Medium();
     }
 
     public virtual void CollectKey(Collider other)
@@ -19,7 +41,8 @@ public class Key : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            poof.Play();
+            Instantiate(collectEffect, transform.position, Quaternion.identity);
+
             Destroy(gameObject);
         }
 
